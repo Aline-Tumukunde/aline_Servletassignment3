@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="english">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+    <title>Student Registration Form</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h2 data-i18n="formTitle">Student Admission Form</h2>
+        <form id="registrationForm" onsubmit="return validateForm()" method="post" action="RegisterServlet">
+            <div class="fields">
+                <div class="field1">
+                    <div class="form-group">
+                        <label for="firstName" data-i18n="firstNameLabel">First Name</label>
+                        <input type="text" id="firstName" name="firstName">
+                        <span id="firstNameError" class="error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName" data-i18n="lastNameLabel">Last Name</label>
+                        <input type="text" id="lastName" name="lastName">
+                        <span id="lastNameError" class="error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="address" data-i18n="addressLabel">Address</label>
+                        <input type="text" id="address" name="address">
+                        <span id="addressError" class="error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="dob" data-i18n="dobLabel">Date Of Birth</label>
+                        <input type="date" id="dob" name="dob">
+                        <span id="dobError" class="error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" data-i18n="emailLabel">Email</label>
+                        <input type="email" id="email" name="email">
+                        <span id="emailError" class="error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone" data-i18n="phoneLabel">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                        <span id="phoneError" class="error"></span>
+                    </div>
+
+                </div>
+                <div class="field2">
+                    <div class="form-group">
+                        <label for="gender" data-i18n="genderLabel">Gender</label>
+                        <select id="gender" name="gender">
+                            <option value="male" data-i18n="maleOption">Male</option>
+                            <option value="female" data-i18n="femaleOption">Female</option>
+                            <option value="other" data-i18n="otherOption">Other</option>
+                        </select>
+                        <span id="genderError" class="error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="motherName" data-i18n="motherNameLabel">Mother's Name</label>
+                        <input type="text" id="motherName" name="motherName">
+                        <span id="motherNameError" class="error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="fatherName" data-i18n="fatherNameLabel">Father's Name</label>
+                        <input type="text" id="fatherName" name="fatherName">
+                        <span id="fatherNameError" class="error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="department" data-i18n="departmentLabel">Department</label>
+                        <input type="text" id="department" name="department">
+                        <span id="departmentError" class="error"></span>
+                        <div class="form-group">
+                            <label for="picture" data-i18n="pictureLabel">Passport Picture</label>
+                            <input type="file" id="picture" name="picture" accept=".jpg,.png">
+                            <span id="pictureError" class="error"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="certificate" data-i18n="certificateNameLabel">Certificate</label>
+                            <input type="file" id="certificate" name="certificate" accept=".pdf">
+                            <span id="certificateError" class="error"></span>
+                </div>
+        </form>
+    </div>
+    <div class="form-group">
+        <label for="languageSelect">Select Language:</label>
+        <select id="languageSelect" onchange="changeLanguage()">
+            <option value="english">English</option>
+            <option value="french">French</option>
+            <option value="kinyarwanda">Kinyarwanda</option>
+        </select>
+        <button type="submit" data-i18n="submitButtonText">Submit</button>
+    </div>
+    <script>
+		
+	</script>
+</body>
+
+</html>
